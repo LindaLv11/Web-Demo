@@ -2,15 +2,71 @@
 <div style='background-color:lightblue' class='container'>
     <header class='jumbotron'>
         <div class='container'>
-            <h1>311 Complaints</h1>
-            <p>Predict house price based on New York City 311 Complaints</p>
+            <h1>311 Service Requests and Income</h1>
+            <p>The 311 Complaint System tells what people concern about and it represents the diverse reality of the urban issue. 
+            Studying into the dataset would allow us to get a better understanding of various problems, the distribution of problems, 
+            a starting point for problem-solving, and eventually help the operation of governmental agencies with better resource-allocation and resource utilization efficiency.</p>
         </div>
     </header>
     <div class='jumbotron'>
         <div class='container'>
-        <h4>Data Pr</h4>
-            <img class='img-fluid' src="https://github.com/LindaLv11/Web-Demo/blob/master/views/dataprocessing.png?raw=true">
+        <h4>Data Collection and Processing</h4>
+            <p>
+                <a href="https://nycopendata.socrata.com/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9">311 Service Requests from 2010 to Present</a>
+            </p>
+            <p>
+                <a href='https://data.cityofnewyork.us/City-Government/2010-Census-Tracts/fxpq-c8ku'>Census Tract Shapefiles</a>
+               Census Tract shapefiles downloaded from the NYC Open Data were used to apply a spatial join on the coordinates of 311 complaints,
+               , providing a common identifier (‘Census Tract ID’) on which to merge demographic data collected from the 2010 American Community Survey. 
+            </p>
+            <p>
+                <a href='https://api.census.gov/data/2016/acs/acs5?get=NAME,B19013_001E&for=tract:*&in=state:36&in=county:085,005,081,061,047'>American Community Survey Median Household Income</a>
+            </p>
+            <img class='img-fluid' src="https://github.com/LindaLv11/Web-Demo/blob/master/views/plot/dataprocessing.png?raw=true">
         </div>
     </div>
+    <div class='jumbotron'>
+        <div class='container'>
+        <h4>Difference in Complaint Composition</h4>
+        <h5>Top 5 ranked composition of complaints</h5>
+            <img class='img-fluid' src="https://github.com/LindaLv11/Web-Demo/blob/master/views/plot/q4.png?raw=true">
+        </div>
+    </div>
+    <div class='jumbotron'>
+        <div class='container'>
+        <h4>Difference in Complaint Composition</h4>
+        <h5>Top 5 ranked composition of complaints</h5>
+            <img class='img-fluid' src="https://github.com/LindaLv11/Web-Demo/blob/master/views/plot/q1.png?raw=true">
+        </div>
+    </div>
+    
+    <div class='jumbotron'>
+        <div class='container'>
+        <h4>Difference in Complaint Composition</h4>
+        <h5>Heating and Income Groups</h5>
+        <p>
+            <img class='img-fluid' src="https://github.com/LindaLv11/Web-Demo/blob/master/views/plot/1hi.jpg?raw=true">
+        </p>
+        </div>
+    </div>
+    <div class='jumbotron'>
+        <div class='container'>
+        <h4>Difference in Complaint Composition</h4>
+        <h5>Heat/Hot water and Income Groups</h5>
+        <p>
+            <img class='img-fluid' src="https://github.com/LindaLv11/Web-Demo/blob/master/views/plot/2hi.jpg?raw=true">
+        </p>
+        </div>
+    </div>
+    <div class='jumbotron'>
+        <div class='container'>
+        <h4>Difference in Complaint Composition</h4>
+        <h5>Illegal Parking and Income Groups</h5>
+        <p>
+            <img class='img-fluid' src="https://github.com/LindaLv11/Web-Demo/blob/master/views/plot/3hi.jpg?raw=true">
+        </p>
+        </div>
+    </div>
+    
 </div>
 <% include partials/footer%>

@@ -3,7 +3,7 @@
 <div style='background-color:lightblue' class='container'>
     <div class='jumbotron'>
         <div class='container'>
-        <h4>Multivariate Regression Using Top 10 Complaint Types</h4>
+        <h4>Multivariate Regression Using Top 100 Complaint Types</h4>
         <p>
             <img class='img-fluid' src="https://github.com/LindaLv11/Web-Demo/blob/master/views/plot/formula.png?raw=true">
         </p>
@@ -15,6 +15,12 @@
         <p>
             <img class='img-fluid' src="https://github.com/LindaLv11/Web-Demo/blob/master/views/plot/r2.png?raw=true">
         </p>
+        <p>
+            The model was able to predict the actual income of the census tract within $17,080 of the actual median income for the census tracts in the test set. 
+        </p>
+        <p>
+            However, looking at the in-sample and out-of-sample R-squared scores (0.26 and 0.23, respectively) reveals that the model suffers from obvious overfitting. 
+        </p>
         </div>
     </div>
     
@@ -23,6 +29,9 @@
         <h4>Association with income</h4>
         <p>
             <img class='img-fluid' src="https://github.com/LindaLv11/Web-Demo/blob/master/views/plot/association_income.png?raw=true">
+        </p>
+        <p>
+            Despite the weak predictive power of the model, it still exhibited several interesting findings regarding the statistical significance of individual complaint types. Noise complaints, taxi complaints, as well as complaints about drinking, blocked driveways, damaged trees, and lead, had a significant positive relationship with income. Whereas complaints about industrial waste, sanitation conditions, graffiti, and construction had significantly negative associations with income.
         </p>
         </div>
     </div>
@@ -33,6 +42,12 @@
         <p>
             <img class='img-fluid' src="https://github.com/LindaLv11/Web-Demo/blob/master/views/plot/matrix.png?raw=true">
         </p>
+        <p>
+            A covariance matrix of the standardized columns shows significant collinearity among the 311 complaint features. 
+        </p>
+        <p>
+            Reducing the number of complaint type options available to 311 callers would serve to resolve some of this confusion - benefitting both callers and data scientists alike.
+        </p>
         </div>
     </div>
     
@@ -42,15 +57,25 @@
         <p>
             <img class='img-fluid' src="https://github.com/LindaLv11/Web-Demo/blob/master/views/plot/r22.png?raw=true">
         </p>
+        <p>
+            Boosted both in-sample and out-of sample performance
+        </p>
+        <p>
+            R^2=1. ~0.5 is generally acceptable in social sciences
+        </p>
         </div>
     </div>
     
     <div class='jumbotron'>
         <div class='container'>
-        <h4>Multiclass logistic regression</h4>
+        <h4>Multiclass logistic regression based on PCA</h4>
+        <p>
+            Base on the result from PCA, I selected the top five variables with the highest weight in those five components respectively to finalize a set of 18 independent variables, 
+        </p>
         <p>
             <img class='img-fluid' src="https://github.com/LindaLv11/Web-Demo/blob/master/views/plot/logistic%20regression.png?raw=true">
         </p>
+
         </div>
     </div>
 </div>
